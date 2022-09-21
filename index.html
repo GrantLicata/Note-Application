@@ -58,12 +58,12 @@
                 if(buttons[i].name === "active"){
                     buttons[i].classList.toggle('active');
                 }
-                
+
                 if(cmd === "insertImage" || cmd === "createLink"){
                     let url = prompt("Enter link here:", "");
-                    textField.document.execCommand(cmd, flase, url);
+                    textField.document.execCommand(cmd, true, url);
                 } else {
-                    textField.document.execCommand(cmd, flase, null);
+                    textField.document.execCommand(cmd, true, null);
 
                 }
             })
